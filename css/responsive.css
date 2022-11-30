@@ -1,0 +1,13 @@
+@media (min-width: 320px) {
+    
+}
+
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 1280px) {
+    .box {
+        height: 600px;
+    }
+}

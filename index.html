@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Pesquisa</title>
+</head>
+<body>
+
+    <script src="./js/funcao.js" defer></script>
+
+    <!-- ---------------------Formulario idade--------------- -->
+    <datalist id="idades">
+        <option value="6">
+        <option value="7">
+        <option value="8">
+        <option value="9">
+        <option value="10">
+        <option value="11">
+        <option value="12">
+        <option value="13">
+        <option value="14">
+        <option value="15">
+        <option value="16">
+        <option value="17">
+        <option value="18">
+        <option value="19">
+        <option value="20">
+        <option value="21">
+        <option value="22">
+        <option value="23">
+        <option value="24">
+        <option value="25">
+        <option value="26">
+        <option value="27">
+        <option value="28">
+        <option value="29">
+        <option value="30">
+        <option value="31">
+        <option value="32">
+        <option value="33">
+        <option value="34">
+        <option value="35">
+        <option value="36">
+        <option value="37">
+        <option value="38">
+        <option value="39">
+        <option value="40">
+        <option value="41">
+        <option value="42">
+        <option value="43">
+        <option value="44">
+        <option value="45">
+        <option value="46">
+        <option value="47">
+        <option value="48">
+        <option value="49">
+        <option value="50">
+        <option value="51">
+        <option value="52">
+        <option value="53">
+        <option value="54">
+        <option value="55">
+        <option value="56">
+        <option value="57">
+        <option value="58">
+        <option value="59">
+        <option value="60">
+        <option value="61">
+        <option value="62">
+        <option value="63">
+        <option value="64">
+        <option value="65">
+        <option value="66">
+        <option value="67">
+        <option value="68">
+        <option value="69">
+        <option value="70">
+        <option value="71">
+        <option value="72">
+        <option value="73">
+        <option value="74">
+        <option value="75">
+        <option value="76">
+        <option value="77">
+        <option value="78">
+        <option value="79">
+        <option value="80">
+        <option value="mais">
+    </datalist>
+
+    <!-- ---------------------Formulario genero--------------- -->
+    <datalist id="generos">
+        <option value="masculino">
+        <option value="feminino">
+    </datalist>
+
+    <!-- ---------------------Formulario nacionalidade--------------- -->
+    <datalist id="estados">
+        <option value="AC">
+        <option value="AL">
+        <option value="AP">
+        <option value="AM">
+        <option value="BA">
+        <option value="CE">
+        <option value="DF">
+        <option value="ES">
+        <option value="MA">
+        <option value="MT">
+        <option value="MS">
+        <option value="MG">
+        <option value="PA">
+        <option value="PB">
+        <option value="PR">
+        <option value="PE">
+        <option value="RJ">
+        <option value="RN">
+        <option value="RS">
+        <option value="RO">
+        <option value="RR">
+        <option value="SC">
+        <option value="SP">
+        <option value="TO">
+    </datalist>
+
+
+
+    <div class="centro">
+        <div class="teste"></div>
+    </div>
+
+
+    
+
+    <!-- ------------------------ caixas ------------------------- -->
+
+    <div class="geral">
+        <div class="box">
+            <div class="row">
+                <div class="coluna">
+                    <h1>Pesquisa do coronavirus</h1>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="linha">
+                    <div class="input-group">
+                        <input type="text" id="nome" required class="input" style="width: 90%; height: 25px;">
+                        <label for="nome" class="input-label">Nome</label>
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <div class="linha">
+                        <div class="input-group">
+                            <input list="generos" name="genero" required class="input" id="genero" style="height: 25px">
+                            <label for="genero" class="input-label">Genero</label>
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                        <div class="input-group">
+                            <input list="idades" name="Idade" required class="input" id="idade" style="width: 40%; height: 25px;">
+                            <label class="input-label">Idade</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <div class="linha">
+                        <div class="input-group">
+                            <input id="estado" list="estados" name="estado" required class="input" style="height: 25px">
+                            <label for="estado" class="input-label">Estado</label>
+                        </div>  
+                    </div>
+
+                    <div class="linha">
+                        <div class="input-group">
+                            <input type="text" required class="input" id="temperatura" style="width: 60%; height: 25px;">
+                            <label for="temperatura" class="input-label">Temperatura</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="coluna">
+                    <input type="submit" class="botao" onclick="armazenar()"></input>
+
+                    <input type="submit" value="Resetar" class="botao" onclick="resetar()"></input>
+                </div>                
+            </div>
+        </div>
+
+        <br>
+
+        <div class="box">
+            <div class="row">
+
+                <div class="coluna">
+                    <div class="linha">
+                        <h1>Resultado</h1>
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <div class="linha">
+                        <p>Menos de 18 anos com febre:</p>
+                    </div>
+
+                    <div class="linha">
+                        <input value="0%" class="input_resultado green" type="text" id="por_menor_febre">
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <div class="linha">
+                        <p>Adultos com febre:</p>
+                    </div>
+
+                    <div class="linha">
+                        <input value="0%" class="input_resultado green" type="text" id="por_adulto_febre">
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <div class="linha">
+                        <p>Idosos com febre:</p>
+                    </div>
+
+                    <div class="linha">
+                        <input value="0%" class="input_resultado green" type="text" id="por_idoso_febre">
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <div class="linha">
+                        <p>Masculinos:</p>
+                    </div>
+
+                    <div class="linha">
+                        <input value="0" class="input_resultado" type="text" id="por_masculino">
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <div class="linha">
+                        <p>Femininos:</p>
+                    </div>
+
+                    <div class="linha">
+                        <input value="0" class="input_resultado" type="text" id="por_feminino">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <br>
+    
+</body>
+</html>
