@@ -178,3 +178,5 @@ function resetar() {
 
     estado_rese.value = "";
 };
+
+console.log("teste")
